@@ -1,0 +1,171 @@
+    /*============ Header css here ===========*/
+    
+    header {
+        @include box-shadow($box-shadow: -2px -5px 14px 3px $shadow-color100);
+        &.sticky {
+            position: fixed;
+            left: 0;
+            right: 0;
+            z-index: 3;
+            @include box-shadow($box-shadow: -2px -5px 14px 3px $shadow-color100);
+        }
+        &.bg-color {
+            background-color: $white;
+        }
+        .navbar-brand {
+            text-decoration: none;
+            color: $black;
+            font-size: 25px;
+            line-height: 30px;
+            font-weight: 600;
+        }
+        form {
+            input[type="search"] {
+                border: 0px;
+                &:focus {
+                    outline: none;
+                    @include box-shadow($box-shadow: none);
+                }
+            }
+        }
+        .search-block {
+            padding: 15px;
+            button {
+                background-color: transparent;
+                border: 0px;
+                padding: 0;
+                min-width: 42px;
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+            @media screen and (max-width: ($lgscreen-size - 1)) {
+                @include flex-order($block-order-value: 2);
+                padding: 0 15px;
+                form {
+                    margin: 30px 0 10px!important;
+                    border: 1px solid $border-color;
+                    input {
+                        width: auto;
+                    }
+                }
+            }
+        }
+        .logo-block {
+            padding: 15px;
+            @media screen and (max-width: ($lgscreen-size - 1)) {
+                @include flex-order($block-order-value: 1);
+                padding: 2px 15px
+            }
+        }
+        .user-icons {
+            @media screen and (max-width: ($lgscreen-size - 1)) {
+                @include flex-order($block-order-value: 3);
+                background-color: $gray-bg-color;
+            }
+            ul {
+                padding: 15px 0;
+                li {
+                    margin: 0 10px;
+                    position: relative;
+                    small {
+                        position: absolute;
+                        background-color: $blue;
+                        color: $white;
+                        font-size: 13px;
+                        line-height: 17px;
+                        @include border-radius($radius: 50%);
+                        height: 20px;
+                        width: 20px;
+                        right: -11px;
+                        top: -7px;
+                    }
+                    @media screen and (min-width: 1400px) {
+                        margin: 0 15px;
+                    }
+                    a {
+                        font-size: 14px;
+                        line-height: 18px;
+                        color: $black;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        .border-top {
+            z-index: 3;
+            button {
+                &.navbar-toggler {
+                    @include box-shadow($box-shadow: none);
+                    @include border-radius($radius: 0);
+                    cursor: pointer;
+                    position: absolute;
+                    background-color: $black;
+                    right: 0;
+                    top: 0;
+                    width: 70px;
+                    height: 66px;
+                    border: 0;
+                    padding: 10px;
+                    z-index: 2;
+                    span {
+                        &.navbar-toggler-icon {
+                            background-color: $white;
+                            width: 100%;
+                            height: 4px;
+                            display: block;
+                            margin: 0 auto;
+                            max-width: 40px;
+                            &::before {
+                                content: "";
+                                background-color: $white;
+                                width: 100%;
+                                height: 4px;
+                                top: 18px;
+                                left: 0;
+                                position: absolute;
+                                right: 0;
+                                margin: 0 auto;
+                                max-width: 40px;
+                            }
+                            &::after {
+                                content: "";
+                                background-color: $white;
+                                width: 100%;
+                                height: 4px;
+                                bottom: 18px;
+                                left: 0;
+                                position: absolute;
+                                right: 0;
+                                margin: 0 auto;
+                                max-width: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+            @media screen and (max-width: ($lgscreen-size - 1)) {
+                @include flex-order($block-order-value: 4);
+                border-top: none !important;
+                position: absolute;
+                .main-navigation {
+                    position: absolute;
+                    top: 0;
+                    height: 100vh;
+                    background-color: $white;
+                    padding: 143px 0 0;
+                    right: 0;
+                    overflow-x: hidden;
+                    margin-top: -63px;
+                    z-index: 1;
+                    width: 0;
+                    @include transition($duration: 0.3s);
+                    &.show {
+                        width: 80%;
+                        overflow-x: visible;
+                        padding: 143px 20px 0;
+                    }
+                }
+            }
+        }
+    }

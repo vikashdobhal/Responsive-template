@@ -1,0 +1,37 @@
+/*=========== navigation styling ===========*/
+
+.navbar-nav {
+    .nav-item {
+        @media screen and (min-width: $xlscreen-size) {
+            margin: 0 6px;
+        }
+        @media screen and (min-width: 1400px) {
+            margin: 0 15px;
+        }
+        .nav-link {
+            font-size: 14px;
+            line-height: 18px;
+            text-decoration: none;
+            color: $black;
+            font-weight: 400;
+        }
+        &.active {
+            .nav-link {
+                font-weight: 600;
+            }
+        }
+        div.dropdown-menu {
+            .dropdown-item {
+                font-size: 14px;
+                line-height: 18px;
+                text-decoration: none;
+                color: $black;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.navbar {
+    padding: 15px 0;
+}

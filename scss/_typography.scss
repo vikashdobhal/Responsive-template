@@ -1,0 +1,158 @@
+/*=========== All typography css here ===============*/
+
+html {
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    font-weight: $base-font-weight;
+    -webkit-font-smoothing: antialiased;
+    font-family: $poppins-font;
+}
+
+h1 {
+    font-size: 3.75rem;
+    line-height: 4rem;
+    font-weight: 600;
+    color: $black;
+    font-family: $poppins-font;
+    text-transform: capitalize;
+}
+
+h2 {
+    font-size: 1.875rem;
+    line-height: 2.375rem;
+    color: $black;
+    font-weight: 600;
+    font-family: $poppins-font;
+}
+
+h3 {
+    font-size: 1.875rem;
+    line-height: 2.125rem;
+    font-weight: 600;
+    color: $black;
+    font-family: $poppins-font;
+    text-transform: inherit;
+}
+
+h4 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-family: $poppins-font;
+    font-weight: 600;
+    color: $black;
+}
+
+h5 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-family: $poppins-font;
+    font-weight: 600;
+    color: $black;
+}
+
+h6 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-family: $poppins-font;
+    font-weight: 400;
+    color: $black;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-family: $poppins-font;
+    font-weight: 400;
+    color: $black-medium;
+}
+
+a {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    letter-spacing: 1px;
+    text-transform: inherit;
+    text-decoration: underline;
+    font-weight: 400;
+    @include transition($duration: .3s);
+    &:hover,
+    &:active {
+        color: $black;
+        text-decoration: none;
+    }
+    &:focus {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        outline: none;
+    }
+}
+
+a[href^="mailto:"] {
+    text-transform: lowercase;
+}
+
+strong,
+strong>a {
+    font-family: $poppins-font;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 800;
+    letter-spacing: inherit;
+    @media screen and (min-width: $lgscreen-size) {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+    }
+}
+
+a[href^="mailto:"] {
+    text-transform: lowercase;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    em,
+    b,
+    span,
+    p {
+        text-transform: lowercase;
+    }
+}
+
+ul {
+    li {
+        list-style-type: none;
+        font-family: $poppins-font;
+    }
+    li,
+    a {
+        font-size: 1rem;
+        line-height: 1.25rem;
+        font-weight: 400;
+        font-family: $poppins-font;
+    }
+}
+
+a {
+    &:focus {
+        outline: none;
+    }
+}

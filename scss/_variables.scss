@@ -1,0 +1,53 @@
+/*============= font family variables here ===========*/
+
+$poppins-font: 'Poppins',
+sans-serif;
+$font-awesome: "Font Awesome 5 Free";
+
+/*====== color variables ==========*/
+
+$black: #000000;
+$dark-black: #3D3733;
+$black-medium: #303035;
+$white: #ffffff;
+$gray-light: #F5F5F7;
+$icon-color: #CDCDD4;
+$icon-hover-color: #253876;
+$gray: #909095;
+$shadow-color100: #b7b3b3;
+$light-yellow: #F0EBD3;
+$gray-medium: #E5E5E5;
+$gray-bg-color: #F8F8F8;
+$border-color: #E6E6E6;
+$gray-border-color: #E8E8EE;
+$success-color: #31e284;
+$blue: #3574F3;
+$blue-medium: #2859E1;
+$bg-purple: #EDD9DE;
+$yellow-color: #E8C900;
+$shadow-color: #0000001A;
+$darker-gray: #D1D1D1;
+$base-font-size: 16px;
+$base-line-height: 1.5;
+$base-font-weight: 400;
+
+/*============= media screen variables here ==============*/
+
+// Small devices (landscape phones, 576px and up)
+$smscreen-size: 576px;
+// Medium devices (tablets, 768px and up)
+$mdscreen-size: 768px;
+// Large devices (desktops, 992px and up)
+$lgscreen-size: 992px;
+// Extra large devices (large desktops, 1200px and up)
+$xlscreen-size: 1200px;
+.custom-object-fit {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.custom-object-fit img {
+    opacity: 0;
+}

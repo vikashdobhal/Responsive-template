@@ -1,0 +1,67 @@
+/*========== Home page styling here =============*/
+
+.banner {
+    padding: 51px 0 46px;
+}
+
+.inner-banner {
+    background: $bg-purple url(../images/346398-PAK8AF-892.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 80% 0px;
+    @media screen and (min-width: $mdscreen-size) {
+        background-position: 100% top;
+    }
+}
+
+.integrate-platform {
+    background-color: $gray-light;
+    .row {
+        background-color: $white;
+        @media screen and (min-width: $mdscreen-size) {
+            padding: 20px;
+        }
+        .logo-block {
+            img {
+                border: 1px solid $gray-border-color;
+                height: 120px;
+                width: 100%;
+                @include object-fit($object-value: cover);
+            }
+        }
+        .small-logo {
+            height: 80px;
+            @include object-fit($object-value: cover);
+        }
+        ul {
+            li {
+                &:first-child {
+                    padding: 10px 15px;
+                }
+                &:last-child {
+                    padding: 22px 15px;
+                }
+            }
+        }
+    }
+    i {
+        color: $yellow-color;
+    }
+}
+
+.get-touch {
+    .col-md-9 {
+        background-image: url(../images/bg1.svg);
+        background-repeat: no-repeat;
+        background-position: 12% top;
+        background-size: contain;
+    }
+}
+
+.join-family {
+    img {
+        border: 1px solid $border-color;
+        height: 120px;
+        @include object-fit($object-value: cover);
+    }
+}

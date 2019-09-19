@@ -1,0 +1,63 @@
+/*========== footer styling here =============*/
+
+footer {
+    .container-fluid {
+        background-color: $gray-light;
+        padding: 10px 15px;
+    }
+    .top-footer {
+        padding: 51px 0;
+        h5 {
+            margin-bottom: 16px;
+            @media screen and (min-width: $mdscreen-size) {
+                margin-bottom: 45px;
+            }
+        }
+        .col-md-2 {
+            @media screen and (max-width: ($mdscreen-size - 1)) {
+                margin-bottom: 20px;
+            }
+        }
+        ul {
+            li {
+                a {
+                    font-size: 0.875rem;
+                    line-height: 1.125rem;
+                    color: $black;
+                    font-weight: 400;
+                    margin-bottom: 20px;
+                    margin-bottom: 10px;
+                    display: block;
+                    text-decoration: none;
+                }
+                &.active,
+                &:hover,
+                &:focus {
+                    a {
+                        text-decoration: underline;
+                        color: $blue-medium;
+                    }
+                }
+            }
+        }
+    }
+    .row.border-top {
+        h4,
+        h5 {
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+        ul {
+            li {
+                margin-right: 10px;
+                a {
+                    color: $icon-color;
+                    font-size: 25px;
+                    &:hover {
+                        color: $icon-hover-color;
+                    }
+                }
+            }
+        }
+    }
+}

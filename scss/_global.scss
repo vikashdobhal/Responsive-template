@@ -1,0 +1,461 @@
+/*============ all global css here =========*/
+
+.newsletter {
+    background-color: $dark-black;
+    h2,
+    p {
+        color: $white;
+    }
+    a {
+        text-decoration: none;
+    }
+}
+
+.order-area {
+    padding: 51px 0;
+    i {
+        color: $blue;
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    .row {
+        padding: 59px 0;
+    }
+    h5 {
+        margin-bottom: 2px;
+    }
+    h6 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+        color: $gray;
+        font-weight: 400;
+    }
+}
+
+.heading {
+    position: relative;
+    padding-bottom: 11px;
+    &::after {
+        content: "";
+        border-bottom: 4px solid $gray-medium;
+        position: absolute;
+        bottom: 0;
+        width: 60px;
+        left: 50%;
+        @include translate($x-value: -50%, $y-value: 0);
+    }
+}
+
+.inner-heading {
+    position: relative;
+    padding-bottom: 11px;
+    &::after {
+        content: "";
+        border-bottom: 4px solid $gray-medium;
+        position: absolute;
+        bottom: 0;
+        width: 60px;
+        left: 0;
+    }
+}
+
+.product-template {
+    padding-bottom: 50px;
+    h2 {
+        margin-bottom: 50px;
+    }
+    .label {
+        background-color: $blue;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        color: $white;
+        font-weight: 400;
+        width: 48px;
+        height: 24px;
+        left: 15px;
+        @include border-radius-corner($top-left: 0, $top-right: 4px, $bottom-right: 4px, $bottom-left: 0);
+    }
+    a {
+        display: block;
+        overflow: hidden;
+        img {
+            margin-bottom: 19px;
+            @include object-fit($object-value: cover);
+        }
+    }
+    h5 {
+        margin-bottom: 4px;
+    }
+    h6 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+        color: $gray;
+        font-weight: 400;
+    }
+}
+
+.sign-up {
+    position: relative;
+    &::before {
+        @media screen and (min-width: $lgscreen-size) {
+            content: "";
+            background-image: url(../images/Group704.svg);
+            z-index: 2;
+            top: 15%;
+            position: absolute;
+            left: 50%;
+            background-size: contain;
+            background-position: center;
+            height: 35px;
+            width: 100px;
+            background-repeat: no-repeat;
+            @include translate($x-value: -50%, $y-value: -15%);
+        }
+        @media screen and (min-width: 1400px) {
+            width: 180px;
+            left: 45%;
+            @include translate($x-value: -45%, $y-value: -15%);
+        }
+    }
+    @media screen and (min-width: $lgscreen-size) {
+        .row {
+            background-image: -webkit-linear-gradient(100deg, $dark-black 50%, $gray-light 35%);
+            background-image: linear-gradient(100deg, $dark-black 50%, $gray-light 35%);
+        }
+    }
+    @media screen and (max-width: ($lgscreen-size - 1)) {
+        .gray-bg {
+            background-color: $gray-light;
+        }
+        .black-bg {
+            background-color: $dark-black;
+        }
+    }
+    .gray-bg,
+    .black-bg {
+        padding: 40px 15px;
+        @media screen and (min-width: $mdscreen-size) {
+            padding: 75px 70px;
+        }
+        @media screen and (min-width: 1400px) {
+            padding: 40px;
+        }
+    }
+    .black-bg {
+        background-image: url(../images/shutterstock_120390298.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        position: relative;
+        h2 {
+            color: $white;
+            z-index: 2;
+        }
+        ul {
+            z-index: 2;
+            position: relative;
+            li {
+                padding-left: 26px;
+                h4 {
+                    color: $light-yellow;
+                }
+                p {
+                    color: $white;
+                }
+                position: relative;
+                &::before {
+                    content: "\f00c";
+                    position: absolute;
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 600;
+                    left: 0;
+                    top: 0;
+                    color: $light-yellow;
+                }
+            }
+        }
+    }
+    &.contact-us {
+        position: relative;
+        &::before {
+            @media screen and (min-width: $lgscreen-size) {
+                content: "";
+                background-image: url(../images/Group768.svg);
+                z-index: 2;
+                top: 15%;
+                position: absolute;
+                left: 50%;
+                background-size: contain;
+                background-position: center;
+                height: 35px;
+                width: 100px;
+                background-repeat: no-repeat;
+                @include translate($x-value: -50%, $y-value: -15%);
+            }
+            @media screen and (min-width: 1400px) {
+                width: 180px;
+                left: 45%;
+                @include translate($x-value: -45%, $y-value: -15%);
+            }
+        }
+        @media screen and (min-width: $lgscreen-size) {
+            .row {
+                background-image: -webkit-linear-gradient(100deg, $gray-light 50%, $dark-black 35%);
+                background-image: linear-gradient(100deg, $gray-light 50%, $dark-black 35%);
+            }
+        }
+        @media screen and (max-width: ($lgscreen-size - 1)) {
+            .gray-bg {
+                background-color: $gray-light;
+            }
+            .black-bg {
+                background-color: $dark-black;
+            }
+        }
+    }
+}
+
+
+/*========= svg map styling ==========*/
+
+#us-map {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+path:hover,
+circle:hover {
+    stroke: $blue !important;
+    stroke-width: 2px;
+    stroke-linejoin: round;
+    fill: $blue!important;
+    cursor: pointer;
+}
+
+#path67 {
+    fill: none !important;
+    stroke: #A9A9A9 !important;
+    cursor: default;
+}
+
+#info-box {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    background-color: $gray;
+    border: 2px solid $black;
+    color: $black;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: $poppins-font;
+}
+
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*=========== testimonial section css here ============*/
+
+.testimonial-section {
+    background-color: $dark-black;
+}
+
+
+/*========= design block css here ================*/
+
+.design-block {
+    position: relative;
+    .tag {
+        background-color: $darker-gray;
+        @include border-radius($radius: 100%);
+        height: 60px;
+        width: 60px;
+        position: absolute;
+        color: $black;
+        font-size: 16px;
+        line-height: 20px;
+        font-family: $poppins-font;
+        left: 50%;
+        top: 50%;
+        z-index: 1;
+        @include translate($x-value: -50%, $y-value: -50%);
+    }
+    a {
+        text-decoration: none;
+    }
+    .black-bg {
+        h3,
+        p {
+            color: $white;
+        }
+        @media screen and (max-width: ($lgscreen-size - 1)) {
+            background-color: $dark-black;
+        }
+    }
+    .gray-bg {
+        background-image: url(../images/09_BACK_MENS_T_TEMPLATE_2048x@2x.png);
+        background-repeat: no-repeat;
+        background-position: center left;
+        background-size: cover;
+        @media screen and (max-width: ($lgscreen-size - 1)) {
+            background-color: $gray-bg-color;
+        }
+    }
+    @media screen and (min-width: $lgscreen-size) {
+        .row {
+            background-image: -webkit-linear-gradient(75deg, $gray-bg-color 50%, $dark-black 45%);
+            background-image: linear-gradient(75deg, $gray-bg-color 50%, $dark-black 45%);
+        }
+    }
+}
+
+
+/*======== success message styling here ==========*/
+
+.success-message,
+.subscribe-mail {
+    padding: 30px;
+    position: fixed;
+    bottom: 30px;
+    background-color: $dark-black;
+    right: -100%;
+    @include translate($x-value: -100%, $y-value: 0);
+    @include transition($duration: 0.6s);
+    visibility: hidden;
+    z-index: 2;
+    &.show {
+        visibility: visible;
+        right: 0;
+        @include translate($x-value: 0, $y-value: 0);
+    }
+    i {
+        color: $success-color;
+        font-size: 60px;
+    }
+    strong,
+    p {
+        color: $white;
+    }
+}
+
+
+/*========== Testimonial slider css here ================*/
+
+.testimonial-bg {
+    background: $dark-black;
+    padding: 60px 0;
+    .carousel-item {
+        .col {
+            @media screen and (max-width: ($mdscreen-size - 1)) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.test-cont p {
+    background: $white;
+    padding: 15px;
+    border-radius: 25px 0;
+}
+
+.test-user {
+    @include flexbox();
+    position: relative;
+    padding-top: 25px;
+}
+
+.user-img {
+    width: 80px;
+    height: 80px;
+    background: $white;
+    @include border-radius($radius: 100%);
+}
+
+.test-user {
+    .testi-arrow {
+        position: absolute;
+        top: -30px;
+        left: 0;
+        height: 60px;
+    }
+    p {
+        color: $white;
+        padding-left: 15px;
+    }
+}
+
+.print-bg {
+    padding: 60px 0;
+}
+
+.print-img {
+    padding: 15px;
+    img {
+        display: block;
+        margin: 0 auto;
+        background: $gray-bg-color;
+        @include transition($duration: 0.5s);
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+    &:hover img {
+        background: $white;
+        box-shadow: 0 0 10px $gray-bg-color;
+        -webkit-transform: scale(1.1, 1.1);
+        transform: scale(1.1, 1.1);
+    }
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    width: 75px;
+    opacity: 0.8;
+    @media screen and (max-width: ($mdscreen-size - 1)) {
+        display: none;
+    }
+}
+
+.carousel-item {
+    .row {
+        @include flex-wrap($flex-wrap: nowrap);
+        @include justfy-content($justify-content: center);
+        .col {
+            text-align: center;
+            .print-img {
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+/*========== body tag css here =======*/
+
+body {
+    &.noscroll {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        &::before {
+            content: "";
+            top: 0;
+            background-color: $black;
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            opacity: .5;
+            z-index: 2;
+        }
+    }
+}

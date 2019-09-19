@@ -1,0 +1,110 @@
+/*=========== form styling ===========*/
+
+form {
+    input[type="text"],
+    input[type="email"] {
+        height: 52px;
+        @include border-radius-corner($top-left: 16px, $top-right: 0px, $bottom-right: 16px, $bottom-left: 0px);
+        border: 0;
+        outline: none;
+        @include box-shadow($box-shadow: none);
+        &:focus {
+            border: 0;
+            outline: none;
+            @include box-shadow($box-shadow: none);
+        }
+    }
+    textarea {
+        height: 27px;
+        width: 100%;
+        border: none;
+        padding: 0 15px;
+        &:focus {
+            border: 0;
+            outline: none;
+            @include box-shadow($box-shadow: none);
+            border-bottom: 2px solid $blue;
+        }
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    textarea,
+    input[type="search"] {
+        font-size: 18px;
+        line-height: 22px;
+        color: $black;
+        font-family: $poppins-font;
+        &::-webkit-input-placeholder {
+            font-size: 14px;
+            line-height: 18px;
+            color: $gray;
+            font-family: $poppins-font;
+        }
+        &::-moz-placeholder {
+            font-size: 14px;
+            line-height: 18px;
+            color: $gray;
+            font-family: $poppins-font;
+        }
+        &:-ms-input-placeholder {
+            font-size: 14px;
+            line-height: 18px;
+            color: $gray;
+            font-family: $poppins-font;
+        }
+        &:-moz-placeholder {
+            font-size: 14px;
+            line-height: 18px;
+            color: $gray;
+            font-family: $poppins-font;
+        }
+    }
+    &.newsletter-form {
+        .form-group {
+            width: 100%;
+            @media screen and (min-width: $mdscreen-size) {
+                width: 380px;
+                margin: 0 11px;
+            }
+        }
+        button[type="submit"] {
+            @media screen and (min-width: $mdscreen-size) {
+                margin-left: 11px;
+            }
+        }
+    }
+    &.sign-up-form {
+        a {
+            text-decoration: none;
+        }
+        .form-group {
+            height: 66px;
+            margin-bottom: 35px;
+            @include border-radius-corner($top-left: 16px, $top-right: 16px, $bottom-right: 0, $bottom-left: 0);
+            border: 0;
+            padding: 15px 0;
+            background-color: $white;
+            outline: none;
+            @include box-shadow($box-shadow: 0px 0px 24px);
+            label {
+                margin-bottom: 0;
+                padding: 0 15px;
+            }
+            input[type="text"],
+            input[type="email"],
+            input[type="password"] {
+                @include border-radius($radius: 0px);
+                height: 27px;
+                padding: 0 15px;
+                border: 0px;
+                &:focus {
+                    border: 0;
+                    outline: none;
+                    @include box-shadow($box-shadow: none);
+                    border-bottom: 2px solid $blue;
+                }
+            }
+        }
+    }
+}
