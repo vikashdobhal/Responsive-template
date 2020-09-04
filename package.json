@@ -27,6 +27,6 @@
   "dependencies": {
     "lesshat": "^4.1.0",
     "natives": "^1.1.6",
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.13.1"
   }
 }
